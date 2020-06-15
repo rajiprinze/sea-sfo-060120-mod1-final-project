@@ -19,7 +19,7 @@ task :setup do
     Rake::Task["db:seed"].invoke
 end
 
-desc "Start the sorting"
+desc "Begin Creating Your Team"
 task :play do 
     sh "ruby bin/run.rb"
 end
