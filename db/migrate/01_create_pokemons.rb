@@ -5,5 +5,6 @@ class CreatePokemons < ActiveRecord::Migration[5.2]
       t.integer :level
       t.string :skill
       t.string :ability
+    end
   end
 end

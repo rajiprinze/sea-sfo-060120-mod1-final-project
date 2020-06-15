@@ -6,5 +6,3 @@ end
 # is associated to the pokemon
 # can have a pokemon added to team
 # can have one removed from team 
-# can display array of abilities
-# can display array of skills

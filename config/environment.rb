@@ -1,7 +1,7 @@
 require 'bundler'
 Bundler.require
 
-require_all 'models'
+require_all 'app/models'
 
 ActiveRecord::Base.establish_connection(
   adapter: 'sqlite3',
