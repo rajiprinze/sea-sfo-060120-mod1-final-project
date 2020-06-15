@@ -1,7 +1,7 @@
 # Mod 1 Project Outline
 
 ## Repo Link
-- <Attach github link here>
+- <Attach https://github.com/keeks5456/sea-sfo-060120-mod1-final-project> 
 
 ## Project Idea/Misson
 - Brief summary of your project.
