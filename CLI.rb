@@ -1,8 +1,17 @@
-puts "hello world"
+ #!/usr/bin/env ruby
 
+def get_trainer
+trainer_name = gets.chomp
+end 
 
-# class Cli 
-# puts "Welcome Trainer! You have finally made it to the Elite 4!"
+def add_pokemon
+    pokemon = gets.chomp
+    if pokemon.find
+end 
+
+get_trainer
+
+# uts "Welcome Trainer! You have finally made it to the Elite 4!"
 # puts 
 # puts "Before you proceed, what is your name?"
 # trainer_name = gets.chomp
@@ -12,9 +21,8 @@ puts "hello world"
 # puts "Please head your pokemon storage computer to do so."
 # puts 
 # puts "........"
-# puts "Welcome! what would you like to do?"
+puts "Welcome! what would 'get_trainer' "
 
-# end
 
 # / this is just me playing around with the cli method, it is just an idea i thought of for our starting point
 # obviously it needs work which can be done together tuesday 6/16
