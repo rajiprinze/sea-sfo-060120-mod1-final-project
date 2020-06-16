@@ -20,7 +20,9 @@ class CLI
 
     def view_team
         Team.all
-        binding.pry
+        if Team.all == []
+            return "You don't have any team yet"
+        end 
     end 
 
 end 
