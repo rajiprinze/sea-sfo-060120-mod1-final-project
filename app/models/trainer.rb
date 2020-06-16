@@ -3,5 +3,6 @@ class Trainer < ActiveRecord::Base
   has_many :pokemons, through: :teams
 end
 
-#the trainer should be able to pick the pokemon and put in the team hash
-# the trainer should be able to remove a pokemon 
+# should see the ability of the pokemon in the team
+#should see the skills of the pokemon from the team
+
