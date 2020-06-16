@@ -9,7 +9,7 @@ end
 desc "Starts a console session"
 task :console do 
     ActiveRecord::Base.logger = Logger.new(STDOUT)    
-    binding.pry
+     binding.pry
 end
 
 desc "bundle && migrate && seed"

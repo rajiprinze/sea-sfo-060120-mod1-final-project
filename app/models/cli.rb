@@ -1,3 +1,4 @@
+
 #  #!/usr/bin/env ruby
 #  require_relative 'app/models/team.rb'
 #  require_relative 'db/seeds.rb'
@@ -42,6 +43,6 @@ end
 # puts "........"
 puts "Welcome! what would 'view_team', 'add_to_team', 'remove_from team' "
 
-
+binding.pry
 # / this is just me playing around with the cli method, it is just an idea i thought of for our starting point
 # obviously it needs work which can be done together tuesday 6/16

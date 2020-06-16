@@ -1,31 +1,6 @@
-<<<<<<< HEAD
-
-
-# House.destroy_all
-# Sorting.destroy_all
-# Student.destroy_all
-=======
-# Pokemon.destroy_all
-# Team.destroy_all
-# Trainer.destroy_all
-
->>>>>>> e4f15d574deaa361420717efd47ae02c1e63884e
-# ravenclaw = House.create(name: "Ravenclaw",
-#   ghost: "The Grey Lady",
-#    motto: "Or yet in wise old Ravenclaw, If you've a ready mind, Where those of wit and learning, Will always find their kind",
-#   points: 150)
-# hufflepuff = House.create(name: "Hufflepuff", 
-#   ghost: "The Fat Friar",
-#    motto: "You might belong in hufflepuff, Where they are just and loyal, Those patient Hufflepuffs are true and unafraid of toil",
-#   points: 150)
-# gryffindor = House.create(name: "Gryffindor", 
-#   ghost: "Nearly Headless Nick",
-#    motto: "You might belong in Gryffindor, Where dwell the brave at heart, Their daring, nerve and chivarly Set Gryffindors apart",
-#   points: 150)
-# slytherin = House.create(name: "Slytherin", 
-#   ghost: "The Bloody Baron",
-#    motto: "Or perhaps in Slytherin You'll make your real friends, Those cunning fold use any means to achieve their ends",
-#   points: 150)
+Pokemon.delete_all
+Team.delete_all
+Trainer.delete_all
 
 pikachu = Pokemon.create(name: "Pikachu", level: 52, skill: "Thunder bolt", ability: "Lightening rod")
 bulbasaur = Pokemon.create(name: "Bulbasaur", level: 55, skill: "Solar Bean", ability: "Leaf Guard")
@@ -43,8 +18,7 @@ mudsdale = Pokemon.create(name: "Mudsdale", level: 79, skill: "High Horsepower",
 tyrantrum = Pokemon.create(name: "Tyrantrum", level: 90, skill: "Clanging Scales", ability: "Strong Jaw")
 empoleon  = Pokemon.create(name: "Empoleon ", level: 95, skill: "Razor Shell", ability: "Torrent")
 arcanine = Pokemon.create(name: "Arcanine", level: 84, skill: "Inferno", ability: "Flash Fire")
-squirtle = Pokemon.create(name: "Squirtle", level: 44, skill: "Waterfall", ability: "Liquid Voice")
-squirtle = Pokemon.create(name: "Squirtle", level: 44, skill: "Waterfall", ability: "Liquid Voice")
-squirtle = Pokemon.create(name: "Squirtle", level: 44, skill: "Waterfall", ability: "Liquid Voice")
-squirtle = Pokemon.create(name: "Squirtle", level: 44, skill: "Waterfall", ability: "Liquid Voice")
+snorlax = Pokemon.create(name: "Snorlax", level: 66, skill: "Body Slam", ability: "Thick Fat")
+garchomp = Pokemon.create(name: "Garchomp", level: 95, skill: "Dragon Tail", ability: "Sand Veil")
+corviknight = Pokemon.create(name: "Corviknight", level: 44, skill: "Waterfall", ability: "Un")
 
