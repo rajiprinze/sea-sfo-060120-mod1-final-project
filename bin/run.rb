@@ -2,7 +2,7 @@ require_relative '../config/environment'
 # require_relative 'seeds.rb'
 system("clear")
 app = CLI.new
-
+app.view_team
 
 
 
@@ -15,7 +15,7 @@ puts "Before you proceed, what is your name?"
 trainer_name = gets.chomp
 puts "Ahh Yes! #{trainer_name}! We have heard amazing things about you!"
 puts "#{trainer_name}, I am sure you are very much eager to start your first battle."
-puts "#{app.add_pokemon}"
+# puts "#{app.add_pokemon}"
 # puts "Before you go, we reccomend you review your team wisely before you challenge the first opponent of the Elite 4."
 # puts "Please head your pokemon storage computer to do so."
 # puts 
