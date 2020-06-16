@@ -1,6 +1,6 @@
 class Pokemon < ActiveRecord::Base 
   has_many :teams
-  has_many :trainers through: :teams
+  has_many :trainers, through: :teams
 
   def get_pokemon_by_name
     self.name
