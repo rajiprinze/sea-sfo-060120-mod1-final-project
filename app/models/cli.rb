@@ -11,7 +11,7 @@ class CLI
         puts "Ahh Yes! #{trainer_name}! We have heard amazing things about you!"
         puts "#{trainer_name}, I am sure you are very much eager to start your first battle."
         puts "Please head your pokemon storage computer to do so."
-# ##### akiko edits ###
+
     end
 
     def pokemon_database 
@@ -28,27 +28,20 @@ class CLI
         # binding.pry
     end
 
+    def add_pokemon(pokemon)
+         new_pokemon = Pokemon.find_by name pokemon
+        Team.all <<  new_pokemon.name
+        binding.pry
+    end 
 
 
     def view_team
         if Team.all == []
             puts "Please choose a Pokemon to start"
+
         end 
     end 
-
-    # def pokemon_database 
-    #     inputs = gets.chomp
-    #     if inputs == "1"
-    #         puts "You have choosen to view your pokemon database"
-    #     elsif inputs == "2"
-    #         puts "You would"
-    #     end
-    # end
 end 
-
-
-## team needs to limit the amount of pokemon
-##
 
 
 
