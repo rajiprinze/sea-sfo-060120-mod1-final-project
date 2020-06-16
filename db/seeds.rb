@@ -18,3 +18,13 @@
 #   ghost: "The Bloody Baron",
 #    motto: "Or perhaps in Slytherin You'll make your real friends, Those cunning fold use any means to achieve their ends",
 #   points: 150)
+
+pikachu = Pokemon.create(name: "Pikachu", level: 52, skill: "Thunder bolt", ability: "Lightening rod")
+bulbasaur = Pokemon.create(name: "Bulbasaur", level: 55, skill: "Solar Bean", ability: "Leaf Guard")
+charmander = Pokemon.create(name: "Charmander", level: 42, skill: "Flame Thrower", ability: "Flash-fire")
+squirttle = Pokemon.create(name: "Squirttle", level: 44, skill: "Waterfall", ability: "Liquid Voice")
+Dargonite = Pokemon.create(name: "Dragonite", level: 52, skill: "Thunder bolt", ability: "Lightening rod")
+pikachu = Pokemon.create(name: "Pikachu", level: 52, skill: "Thunder bolt", ability: "Lightening rod")
+pikachu = Pokemon.create(name: "Pikachu", level: 52, skill: "Thunder bolt", ability: "Lightening rod")
+pikachu = Pokemon.create(name: "Pikachu", level: 52, skill: "Thunder bolt", ability: "Lightening rod")
+
