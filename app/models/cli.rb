@@ -4,46 +4,51 @@
 #  require_relative 'db/seeds.rb'
 
 class CLI 
-# def get_trainer
-# trainer_name = gets.chomp
-# end 
+    def welcome_trainer
+        puts "Welcome Trainer! You have finally made it to the Elite 4!"
+        puts "Before you proceed, what is your name?"
+        trainer_name = gets.chomp
+        puts "Ahh Yes! #{trainer_name}! We have heard amazing things about you!"
+        puts "#{trainer_name}, I am sure you are very much eager to start your first battle."
+        puts "Please head your pokemon storage computer to do so."
+# ##### akiko edits ###
+    end
 
-    def add_pokemon
-        pokemon = gets.chomp
-        if pokemon.find
+    def pokemon_database 
+        inputs = gets.chomp
+        if inputs == "1"
+            puts "You have choosen to view your pokemon database"
+        else 
+            puts "Please choose a valid input"
         end
-    end 
+    end
 
-    def empty_team
-        puts "hello before your big fight you are going to need a pokemon"
-        add_pokemon
-    end 
+    def view_pokemon_database
+       p Pokemon.all.to_a
+        # binding.pry
+    end
+
+
 
     def view_team
-        binding.pry
-        Team.all
         if Team.all == []
-            return "You don't have any team yet"
+            puts "Please choose a Pokemon to start"
         end 
     end 
 
+    # def pokemon_database 
+    #     inputs = gets.chomp
+    #     if inputs == "1"
+    #         puts "You have choosen to view your pokemon database"
+    #     elsif inputs == "2"
+    #         puts "You would"
+    #     end
+    # end
 end 
 
 
 ## team needs to limit the amount of pokemon
-## 
+##
 
-# uts "Welcome Trainer! You have finally made it to the Elite 4!"
-# puts 
-# puts "Before you proceed, what is your name?"
-# trainer_name = gets.chomp
-# puts "Ahh Yes! #{trainer_name}! We have heard amazing things about you!"
-# puts "#{trainer_name}, I am sure you are very much eager to start your first battle."
-# puts "Before you go, we reccomend you review your team wisely before you challenge the first opponent of the Elite 4."
-# puts "Please head your pokemon storage computer to do so."
-# puts 
-# puts "........"
-puts "Welcome! what would 'view_team', 'add_to_team', 'remove_from team' "
 
-# / this is just me playing around with the cli method, it is just an idea i thought of for our starting point
-# obviously it needs work which can be done together tuesday 6/16
+
