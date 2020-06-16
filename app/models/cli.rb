@@ -1,22 +1,32 @@
- #!/usr/bin/env ruby
+#  #!/usr/bin/env ruby
+#  require_relative 'app/models/team.rb'
+#  require_relative 'db/seeds.rb'
+
 class CLI 
-    @@team = []
-def get_trainer
-trainer_name = gets.chomp
+# def get_trainer
+# trainer_name = gets.chomp
+# end 
+
+    def add_pokemon
+        pokemon = gets.chomp
+        if pokemon.find
+        end
+    end 
+
+    def empty_team
+        puts "hello before your big fight you are going to need a pokemon "
+        add_pokemon
+    end 
+
+    def view_team
+        Team.all
+    end 
+
 end 
 
-def add_pokemon
-    pokemon = gets.chomp
-    if pokemon.find
-end 
 
-def empty_team
-    puts "hello before your big fight you are going to need a pokemon "
-    add_pokemon
-end 
-
-end 
-get_trainer
+## team needs to limit the amount of pokemon
+## 
 
 # uts "Welcome Trainer! You have finally made it to the Elite 4!"
 # puts 

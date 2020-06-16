@@ -1,7 +1,8 @@
+
+
 # House.destroy_all
 # Sorting.destroy_all
 # Student.destroy_all
-
 # ravenclaw = House.create(name: "Ravenclaw",
 #   ghost: "The Grey Lady",
 #    motto: "Or yet in wise old Ravenclaw, If you've a ready mind, Where those of wit and learning, Will always find their kind",
@@ -23,7 +24,7 @@ pikachu = Pokemon.create(name: "Pikachu", level: 52, skill: "Thunder bolt", abil
 bulbasaur = Pokemon.create(name: "Bulbasaur", level: 55, skill: "Solar Bean", ability: "Leaf Guard")
 charmander = Pokemon.create(name: "Charmander", level: 42, skill: "Flame Thrower", ability: "Flash-fire")
 squirttle = Pokemon.create(name: "Squirttle", level: 44, skill: "Waterfall", ability: "Liquid Voice")
-Dargonite = Pokemon.create(name: "Dragonite", level: 52, skill: "Thunder bolt", ability: "Lightening rod")
+dragonite = Pokemon.create(name: "Dragonite", level: 52, skill: "Thunder bolt", ability: "Lightening rod")
 pikachu = Pokemon.create(name: "Pikachu", level: 52, skill: "Thunder bolt", ability: "Lightening rod")
 pikachu = Pokemon.create(name: "Pikachu", level: 52, skill: "Thunder bolt", ability: "Lightening rod")
 pikachu = Pokemon.create(name: "Pikachu", level: 52, skill: "Thunder bolt", ability: "Lightening rod")
