@@ -20,6 +20,7 @@ class CLI
 
     def view_team
         Team.all
+        binding.pry
     end 
 
 end 
