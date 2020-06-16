@@ -4,12 +4,10 @@
 #  require_relative 'db/seeds.rb'
 
 class CLI 
-# def get_trainer
-# trainer_name = gets.chomp
-# end 
 
-    def add_pokemon
-        puts "progress"
+    def add_pokemon(name)
+
+        
 
     end 
 
