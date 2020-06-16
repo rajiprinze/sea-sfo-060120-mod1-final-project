@@ -1,7 +1,15 @@
+<<<<<<< HEAD
+
+
+# House.destroy_all
+# Sorting.destroy_all
+# Student.destroy_all
+=======
 # Pokemon.destroy_all
 # Team.destroy_all
 # Trainer.destroy_all
 
+>>>>>>> e4f15d574deaa361420717efd47ae02c1e63884e
 # ravenclaw = House.create(name: "Ravenclaw",
 #   ghost: "The Grey Lady",
 #    motto: "Or yet in wise old Ravenclaw, If you've a ready mind, Where those of wit and learning, Will always find their kind",
