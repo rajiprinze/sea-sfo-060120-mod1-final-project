@@ -1,5 +1,5 @@
 require_relative '../config/environment'
 
 system("clear")
-# app = CLI.new
-# app.greeting
+app = CLI.new
+app.
