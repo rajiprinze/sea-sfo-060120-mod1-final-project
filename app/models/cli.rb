@@ -8,15 +8,14 @@ class CLI
 # end 
 
     def add_pokemon
-        pokemon = gets.chomp
-        if pokemon.find
-        end
+        puts "progress"
+
     end 
 
-    def empty_team
-        puts "hello before your big fight you are going to need a pokemon "
-        add_pokemon
-    end 
+    # def empty_team
+    #     puts "hello before your big fight you are going to need a pokemon "
+    #     add_pokemon
+    # end 
 
     def view_team
         Team.all
