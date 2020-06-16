@@ -33,4 +33,10 @@ absol = Pokemon.create(name: "Absol", level: 88, skill: "Dark Pulse", ability: "
 greninja = Pokemon.create(name: "Greninja", level: 85, skill: "Darkest Lariat", ability: "Torrent")
 mudsdale = Pokemon.create(name: "Mudsdale", level: 79, skill: "High Horsepower", ability: "Own Tempo")
 tyrantrum = Pokemon.create(name: "Tyrantrum", level: 90, skill: "Clanging Scales", ability: "Strong Jaw")
+empoleon  = Pokemon.create(name: "Empoleon ", level: 95, skill: "Razor Shell", ability: "Torrent")
+arcanine = Pokemon.create(name: "Arcanine", level: 84, skill: "Inferno", ability: "Flash Fire")
+squirtle = Pokemon.create(name: "Squirtle", level: 44, skill: "Waterfall", ability: "Liquid Voice")
+squirtle = Pokemon.create(name: "Squirtle", level: 44, skill: "Waterfall", ability: "Liquid Voice")
+squirtle = Pokemon.create(name: "Squirtle", level: 44, skill: "Waterfall", ability: "Liquid Voice")
+squirtle = Pokemon.create(name: "Squirtle", level: 44, skill: "Waterfall", ability: "Liquid Voice")
 
