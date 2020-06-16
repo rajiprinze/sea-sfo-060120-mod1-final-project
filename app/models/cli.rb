@@ -4,26 +4,23 @@
 #  require_relative 'db/seeds.rb'
 
 class CLI 
-# def get_trainer
-# trainer_name = gets.chomp
-# end 
 
-    def add_pokemon
-        pokemon = gets.chomp
-        if pokemon.find
-        end
+    def add_pokemon(pokemon)
+         new_pokemon = Pokemon.find_by name pokemon
+        Team.all <<  new_pokemon.name
+        binding.pry
     end 
 
-    def empty_team
-        puts "hello before your big fight you are going to need a pokemon"
-        add_pokemon
-    end 
+    # def empty_team
+    #     puts "hello before your big fight you are going to need a pokemon "
+    #     add_pokemon
+    # end 
 
     def view_team
         binding.pry
         Team.all
         if Team.all == []
-            return "You don't have any team yet"
+            return "You don't have a team yet"
         end 
     end 
 
