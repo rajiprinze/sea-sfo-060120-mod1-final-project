@@ -21,5 +21,4 @@ arcanine = Pokemon.create(name: "Arcanine", level: 84, skill: "Inferno", ability
 snorlax = Pokemon.create(name: "Snorlax", level: 66, skill: "Body Slam", ability: "Thick Fat")
 garchomp = Pokemon.create(name: "Garchomp", level: 95, skill: "Dragon Tail", ability: "Sand Veil")
 corviknight = Pokemon.create(name: "Corviknight", level: 44, skill: "Waterfall", ability: "Un")
-squirtle = Pokemon.create(name: "Squirtle", level: 44, skill: "Waterfall", ability: "Liquid Voice")
 
