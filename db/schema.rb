@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 3) do
 
   create_table "teams", force: :cascade do |t|
     t.string "name"
+    t.integer "pokemon_id"
+    t.integer "trainer_id"
   end
 
   create_table "trainers", force: :cascade do |t|

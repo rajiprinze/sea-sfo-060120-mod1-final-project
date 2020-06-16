@@ -2,8 +2,6 @@ Pokemon.delete_all
 Team.delete_all
 Trainer.delete_all
 
-
-
 pikachu = Pokemon.create(name: "Pikachu", level: 52, skill: "Thunder bolt", ability: "Lightening rod")
 bulbasaur = Pokemon.create(name: "Bulbasaur", level: 55, skill: "Solar Bean", ability: "Leaf Guard")
 charmander = Pokemon.create(name: "Charmander", level: 42, skill: "Flame Thrower", ability: "Flash-fire")
