@@ -1,5 +1,6 @@
  #!/usr/bin/env ruby
-
+class CLI 
+    @@team = []
 def get_trainer
 trainer_name = gets.chomp
 end 
@@ -9,6 +10,12 @@ def add_pokemon
     if pokemon.find
 end 
 
+def empty_team
+    puts "hello before your big fight you are going to need a pokemon "
+    add_pokemon
+end 
+
+end 
 get_trainer
 
 # uts "Welcome Trainer! You have finally made it to the Elite 4!"
@@ -21,7 +28,7 @@ get_trainer
 # puts "Please head your pokemon storage computer to do so."
 # puts 
 # puts "........"
-puts "Welcome! what would 'get_trainer' "
+puts "Welcome! what would 'view_team', 'add_to_team', 'remove_from team' "
 
 
 # / this is just me playing around with the cli method, it is just an idea i thought of for our starting point
