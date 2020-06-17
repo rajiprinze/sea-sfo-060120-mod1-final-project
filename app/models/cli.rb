@@ -32,8 +32,10 @@ class CLI
     end
 
     def view_team
+        Team.all
          Team.all == []
          puts "Your team is currently empty"
+        #  binding.pry 
     end
      
     # PLEASE DONT CHANGE
@@ -46,7 +48,8 @@ class CLI
         # binding.pry
         new_pokemon = Pokemon.find_by(name: user_input)
         new_pokemon_name = new_pokemon.name
-        new_team = Team.new( name: new_pokemon_name)
+        # new_pokemon_id = new_pokemon.id
+        new_team = Team.create( name: new_pokemon_name)
     #    binding.pry
    end 
 

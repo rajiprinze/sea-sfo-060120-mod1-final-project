@@ -9,9 +9,10 @@ app.welcome_trainer
 # puts "........"
 # puts "please press 1, to view your Pokemon database"
 # app.pokemon_database 
-app.view_team
+# app.view_team
 puts app.add_pokemon(app.user_input)
-puts "Please choose a Pokemon to add to your team"
+app.view_team
+# puts "Please choose a Pokemon to add to your team"
 # binding.pry 
 # app.user_input
 
