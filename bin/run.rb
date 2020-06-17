@@ -2,8 +2,7 @@ require_relative '../config/environment'
 # require_relative 'seeds.rb'
 system("clear")
 app = CLI.new
-# box = TTY::Box.frame "P O K E M O N", padding: 3, align: :center
-# print box
+app.poke_box
 app.welcome_trainer
 puts "---------------------------------------"
 puts 

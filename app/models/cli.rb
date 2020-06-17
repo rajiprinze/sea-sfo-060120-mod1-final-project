@@ -6,7 +6,7 @@ require 'pry'
 class CLI 
 # ignore this, I just wanted to test out TTY gems, but please keep
     def poke_box
-        box = TTY::Box.frame "P O K E M O N", padding: 3, align: :center
+        box = TTY::Box.frame(width: 30, height: 10, border: :thick)
         print box
     end
   
