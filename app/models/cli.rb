@@ -6,7 +6,7 @@ require 'pry'
 class CLI 
 # ignore this, I just wanted to test out TTY gems, but please keep
     def poke_box
-        box = TTY::Box.frame "P O K E M O N", padding: 3, align: :center
+        box = TTY::Box.frame "P O K E M O N", "Gott'a Catch'em All " padding: 3, align: :center
         print box
     end
   
@@ -40,31 +40,28 @@ class CLI
 
     def view_team
          Team.all == []
-    end 
-
+    end
+  
     # PLEASE DONT CHANGE
     def user_input
         input = gets.chomp
     end
     
 # PLEASE DONT CHANGE
-
     def add_pokemon(user_input)
+        # binding.pry
         new_pokemon = Pokemon.find_by(name: user_input)
-        new_pokemon.name 
-     binding.pry
+        new_pokemon_name = new_pokemon.name
+        new_team = Team.new( name: new_pokemon_name)
+    #    binding.pry
    end 
 
-   def remove_pokemon
-
+   def remove_pokemon(user_input)
+# ARE YOU DOING THIS OR CAN I???
    end
-#    def exit 
-#     if user_input == "exit"
-#         # brain fart trying to use exit as an input
-#    end
-#    binding.pry
 
-
+# binding.pry
 end 
+
 
 
