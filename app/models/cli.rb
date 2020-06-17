@@ -4,21 +4,24 @@ require 'pry'
 #  require_relative 'db/seeds.rb'
 
 class CLI 
-# ignore this, I just wanted to test out TTY gems, but please keep
-    # def poke_box
-    #     box = TTY::Box.frame "P O K E M O N", "Gott'a Catch'em All", padding: 3, align: :center
-    #     print box
-    # end
-  
+#   move welcome to trainer class??
     def welcome_trainer
         puts "Welcome Trainer! You have finally made it to the Elite 4!"
-        puts "Before you proceed, what is your name?"
-        trainer_name = user_input
+        puts "Before you proceed, please anser these questions..."
+        puts "What is your Name?"
+        trainer_name = gets.chomp
+        puts "How old are you?"
+        trainer_age = gets.chomp
+        puts "Name of your Hometown?"
+        trainer_hometown = gets.chomp
         puts "----------------------------------------------------------------"
         puts  "Ahh Yes! #{trainer_name}! We have heard amazing things about you!"
         puts "#{trainer_name}, I am sure you are very much eager to start your first battle."
         puts "Please head your pokemon storage computer to do so."
+            # binding.pry
+        Trainer.all
     end
+    # need to get user input for name age and hometown
 
     def pokemon_database 
         inputs = gets.chomp
@@ -36,7 +39,6 @@ class CLI
        p "#{pokemon.name}, level: #{pokemon.level}, skill: #{pokemon.skill}, ability: #{pokemon.ability}"
        end
     end
-# how are we going to get the added pokemon into the view team method?
     def view_team
         # Team.all
         Team.all.map { |pokeman| pokeman.name}
@@ -46,29 +48,28 @@ class CLI
 
     end
   
-    # PLEASE DONT CHANGE
     def user_input
         input = gets.chomp
     end
     
-# PLEASE DONT CHANGE
     def add_pokemon(user_input)
         
         new_pokemon = Pokemon.find_by(name: user_input)
         new_pokemon_name = new_pokemon.name
         new_pokemon_id = new_pokemon.id
-        binding.pry
+        new_team = Team.create( name: new_pokemon_name, id: new_pokemon.id )
 
-        # new_team = Team.new( name: new_pokemon_name, pokemon_id: new_pokemon_id, trainer_id: 4)
-        binding pry
-        # puts "#{new_pokemon_name} has now been added to your name"
-        # if team.count is equal to 6, please inform the trainer that their team is full 
-        #trainer should not have the option to leave until Team is full
+        # if Team.count == 6
+        #     puts "You have successfully filled your team!"
+        # elsif Team.count > 6
+        #     puts "Sorry to say, you can only have 6 pokemon on your team!"
+        # end
    end 
 
    def remove_pokemon(user_input)
-    
-    # puts pokemon has been removes
+     target = Team.all.find{|pokemon| pokemon.name == user_input}
+     Team.all.delete(target)
+    binding.pry
    end
 
    def choices
@@ -76,6 +77,7 @@ class CLI
     puts "1. Add Pokemon to team"
     puts "2. Remove Pokemon to team"
     puts "3. View Pokemon team"
+
     if user_input == "1"
     #    add_pokemon(user_input)
     elsif user_input == "2"
@@ -92,6 +94,12 @@ class CLI
     puts "Fantastic! You are now ready to take on the Elite 4 #{user_input}."
     puts "Please Proceed, the Elite 4 is waiting for you!"
     puts "Goodluck!"
+    end
+
+    def design
+        font = TTY::Font.new(:doom)
+        pastel = Pastel.new
+        puts pastel.yellow(font.write("Pokemon"))
     end
 
 end 

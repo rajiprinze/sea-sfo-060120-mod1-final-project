@@ -11,9 +11,12 @@ app = CLI.new
 # puts "........"
 # puts "please press 1, to view your Pokemon database"
 # app.pokemon_database
-app.add_pokemon(app.user_input)
+# app.add_pokemon(app.user_input)
+# binding.pry
+app.remove_pokemon(gets.chomp)
 binding.pry
-puts app.view_team
+
+# puts app.view_team
 # binding.pry
 # puts app.add_pokemon(app.user_input)
 # app.view_team
