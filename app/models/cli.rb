@@ -17,14 +17,16 @@ class CLI
         inputs = gets.chomp
         if inputs == "1"
             puts "You have choosen to view your pokemon database"
+            view_pokemon_database
         else 
             puts "Please choose a valid input"
+            pokemon_database
         end
     end
 
     def view_pokemon_database
        Pokemon.all.select do |pokemon|
-       p pokemon 
+       p "#{pokemon.name}, level: #{pokemon.level}, skill: #{pokemon.skill}, ability:#{pokemon.ability}"
         # binding.pry
        end
     # didnt give me what i wanted but ITS CLOSE ENOUGH!!! for now lol
@@ -35,11 +37,22 @@ class CLI
          puts "Your team is currently empty"
     end 
 
-    def add_pokemon(pokemon)
-        new_pokemon = Pokemon.find_by name pokemon
-       Team.all <<  new_pokemon.name
+    # call add_pokemon after user_input is received
+    def user_input
+        input = gets.chomp
+        add_pokemon(input)
+    end
+    
+
+    def add_pokemon(pokemon_name)
+        new_pokemon = Pokemon.find_by(name: pokemon_name)
+       Team.all <<  new_pokemon.name #is the .name needed??
        binding.pry
    end 
+
+   def remove_pokemon
+
+   end
 end 
 
 
