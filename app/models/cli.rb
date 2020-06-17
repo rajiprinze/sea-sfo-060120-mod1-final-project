@@ -41,7 +41,6 @@ class CLI
     end
     def view_team
        Team.all.map { |pokeman| pokeman.name}
-       p "#{pokemon.name}"
     end
   
     def user_input
