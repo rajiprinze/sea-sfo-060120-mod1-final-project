@@ -6,15 +6,15 @@ app = CLI.new
 # app.design
 # app.welcome_trainer
 # pokemon = gets.chomp
-# app.add_pokemon(pokemon)
+app.add_pokemon(gets.chomp)
 # binding .pry
 # puts "........"
 # puts "please press 1, to view your Pokemon database"
 # app.pokemon_database
 # app.add_pokemon(app.user_input)
 # binding.pry
-app.remove_pokemon(gets.chomp)
-binding.pry
+# app.remove_pokemon(gets.chomp)
+# binding.pry
 
 # puts app.view_team
 # binding.pry

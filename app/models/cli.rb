@@ -1,4 +1,5 @@
 require 'pry'
+RUBYOPT='-W:no-deprecated'
 #  !/usr/bin/env ruby
 #  require_relative 'app/models/team.rb'
 #  require_relative 'db/seeds.rb'
@@ -69,7 +70,7 @@ class CLI
    def remove_pokemon(user_input)
      target = Team.all.find{|pokemon| pokemon.name == user_input}
      Team.all.delete(target)
-    binding.pry
+    # binding.pry
    end
 
    def choices
