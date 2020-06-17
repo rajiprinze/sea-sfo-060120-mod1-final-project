@@ -41,9 +41,9 @@ class CLI
        p "#{pokemon.name}, level: #{pokemon.level}, skill: #{pokemon.skill}, ability: #{pokemon.ability}"
        end
     end
-    
+
     def view_team
-       Team.all.map { |pokeman| pokeman.name}
+     p Team.all.map { |pokeman| pokeman.name}
     end
   
     def user_input
@@ -56,16 +56,7 @@ class CLI
         new_pokemon_id = new_pokemon.id
         new_team = Team.create( name: new_pokemon_name, id: new_pokemon.id )
         # binding.pry
-
-        # new_team = Team.new( name: new_pokemon_name, pokemon_id: new_pokemon_id, trainer_id: 4)
-        # binding pry
-        # puts "#{new_pokemon_name} has now been added to your name"
-
-        # if Team.count == 6
-        #     puts "You have successfully filled your team!"
-        # elsif Team.count > 6
-        #     puts "Sorry to say, you can only have 6 pokemon on your team!"
-        # end
+        puts "#{new_pokemon_name} has now been added to your team"
    end 
 
    def remove_pokemon(user_input)
@@ -79,30 +70,33 @@ class CLI
     puts "2. Remove Pokemon to team"
     puts "3. View Pokemon team"
 
-    if user_input == "1"
+    trainer_choice = user_input
+    if trainer_choice == "1"
         puts "You have choosen add pokemon, please add pokemon to your team"
-       add_pokemon(user_input)
-    elsif user_input == "2"
-        puts "Which POkemon would you like to remove?"
-        puts view_team
+        add_pokemon(user_input)
+       choices
+
+    elsif trainer_choice == "2"
+        puts "Which Pokemon would you like to remove?"
         remove_pokemon(user_input)
-    elsif user_input == "3"
-       puts view_team
-    else
-        puts "Please pick a valid option"
         choices
-        binding.pry
+    elsif trainer_choice == "3"
+        puts "You have choosen to view your Team"
+       puts view_team
+       choices
+    else
+        ending_message
     end
    end
 
-   def full_team
-    if Team.count == 6
-        puts "You have successfully filled your team!"
-        ending_message 
-    elsif Team.count < 6
-        puts "Sorry to say, you can only have 6 pokemon on your team!"
-      end
-    end
+#    def full_team
+#     if Team.count == 6
+#         puts "You have successfully filled your team!"
+#         ending_message 
+#     elsif Team.count < 6
+#         puts "Sorry to say, you can only have 6 pokemon on your team!"
+#       end
+#     end
 
     def ending_message 
         puts "Fantastic! You are now ready to take on the Elite 4 #{user_input}."
