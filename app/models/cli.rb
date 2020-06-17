@@ -29,21 +29,19 @@ class CLI
        p "#{pokemon.name}, level: #{pokemon.level}, skill: #{pokemon.skill}, ability:#{pokemon.ability}"
         # binding.pry
        end
-    # didnt give me what i wanted but ITS CLOSE ENOUGH!!! for now lol
     end
 
     def view_team
          Team.all == []
          puts "Your team is currently empty"
     end 
-
-    # call add_pokemon after user_input is received
+    # PLEASE DONT CHANGE
     def user_input
         input = gets.chomp
         add_pokemon(input)
     end
     
-
+# PLEASE DONT CHANGE
     def add_pokemon(pokemon_name)
         new_pokemon = Pokemon.find_by(name: pokemon_name)
        Team.all <<  new_pokemon.name #is the .name needed??
@@ -51,9 +49,12 @@ class CLI
    end 
 
    def remove_pokemon
-
+# ARE YOU DOING THIS OR CAN I???
    end
 end 
-
+# WE SHOULD TALK ABOUT THATS HAPPENING BETWEEN OUR CODES WOULD LIKE MORE COMMUNICATIOM BETWEEN EACH OTHER 
+# SO THERE ARENT A TON OF CONFLICTS
+# PLEASE AND THANKS!
+# note I am using caps cus sometimes comments are easy to ignore
 
 
