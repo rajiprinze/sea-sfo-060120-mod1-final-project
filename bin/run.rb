@@ -5,13 +5,21 @@ app = CLI.new
 app.poke_box
 app.welcome_trainer
 puts "---------------------------------------"
-puts 
 puts "please press 1, to view your Pokemon database"
 app.pokemon_database 
-app.view_team
 puts "Your team is currently empty"
 puts "Please choose a Pokemon to add to your team"
-app.user_input
+puts 
+app.view_team
+puts app.add_pokemon(app.user_input)
+puts "---------------------------------------"
+puts 
+app.choices
+
+# app.view_team
 
 
 
+
+# pokemon = gets.chomp
+# app.add_pokemon(pokemon)
