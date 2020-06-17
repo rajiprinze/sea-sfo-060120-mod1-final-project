@@ -1,19 +1,14 @@
 require 'pry'
- #!/usr/bin/env ruby
- require_relative 'app/models/team.rb'
- require_relative 'db/seeds.rb'
+#  !/usr/bin/env ruby
+#  require_relative 'app/models/team.rb'
+#  require_relative 'db/seeds.rb'
 
 class CLI 
 # ignore this, I just wanted to test out TTY gems, but please keep
-    def poke_box
-        box = TTY::Box.frame "P O K E M O N", "Gott'a Catch'em All", padding: 3, align: :center
-        print box
-    end
-
-    def trainer_name 
-        trainer_input = get.chomp
-        trainer = trainer_input 
-    end
+    # def poke_box
+    #     box = TTY::Box.frame "P O K E M O N", "Gott'a Catch'em All", padding: 3, align: :center
+    #     print box
+    # end
   
     def welcome_trainer
         puts "Welcome Trainer! You have finally made it to the Elite 4!"
@@ -39,13 +34,15 @@ class CLI
     def view_pokemon_database
        Pokemon.all.select do |pokemon|
        p "#{pokemon.name}, level: #{pokemon.level}, skill: #{pokemon.skill}, ability: #{pokemon.ability}"
-        # binding.pry
        end
     end
 # how are we going to get the added pokemon into the view team method?
     def view_team
-        Team.all
+        # Team.all
+        Team.all.map { |pokeman| pokeman.name}
         #  Team.all == []
+
+        # binding.pry
 
     end
   
@@ -56,17 +53,23 @@ class CLI
     
 # PLEASE DONT CHANGE
     def add_pokemon(user_input)
-        # binding.pry
+        
         new_pokemon = Pokemon.find_by(name: user_input)
         new_pokemon_name = new_pokemon.name
-        new_team = Team.new( name: new_pokemon_name)
-        puts "#{new_pokemon_name} has now been added to your team"
-    #    binding.pry
+        new_pokemon_id = new_pokemon.id
+        binding.pry
+
+        # new_team = Team.new( name: new_pokemon_name, pokemon_id: new_pokemon_id, trainer_id: 4)
+        binding pry
+        # puts "#{new_pokemon_name} has now been added to your name"
+        # if team.count is equal to 6, please inform the trainer that their team is full 
+        #trainer should not have the option to leave until Team is full
    end 
 
-#    def remove_pokemon(user_input)
-#     # puts pokemon has been removes
-#    end
+   def remove_pokemon(user_input)
+    
+    # puts pokemon has been removes
+   end
 
    def choices
     puts "What would you like to do now?"
@@ -85,16 +88,11 @@ class CLI
     end
    end
 
-#    def six_members
-#     if # if there are 6 pokemon in the team, we must inform the trainer and ask
-#         #  "are you sure this is the team you would like to use? (y/n)"
-#     else 
-#         # please continue to choose your pokemon
-#     end 
-#    end
-
-ending message 
-puts "You are now ready to take on the Elite 4 #{trainer}"
+    def ending_message 
+    puts "Fantastic! You are now ready to take on the Elite 4 #{user_input}."
+    puts "Please Proceed, the Elite 4 is waiting for you!"
+    puts "Goodluck!"
+    end
 
 end 
 
