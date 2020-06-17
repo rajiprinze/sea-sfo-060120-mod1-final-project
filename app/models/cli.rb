@@ -17,8 +17,8 @@ class CLI
         puts "----------------------------------------------------------------"
         puts  "Ahh Yes! #{trainer_name}! We have heard amazing things about you!"
         puts "#{trainer_name}, I am sure you are very much eager to start your first battle."
-        puts "Please head your pokemon storage computer to do so."
-            # binding.pry
+        puts "Oh Dear! Looks like your Team is currently empty!"
+        puts "Please head to your pokemon storage computer fix that :)."
         Trainer.all
     end
     # need to get user input for name age and hometown
@@ -40,12 +40,8 @@ class CLI
        end
     end
     def view_team
-        # Team.all
-        Team.all.map { |pokeman| pokeman.name}
-        #  Team.all == []
-
-        # binding.pry
-
+       Team.all.map { |pokeman| pokeman.name}
+       p "#{pokemon.name}"
     end
   
     def user_input
@@ -53,23 +49,15 @@ class CLI
     end
     
     def add_pokemon(user_input)
-        
         new_pokemon = Pokemon.find_by(name: user_input)
         new_pokemon_name = new_pokemon.name
         new_pokemon_id = new_pokemon.id
         new_team = Team.create( name: new_pokemon_name, id: new_pokemon.id )
-
-        # if Team.count == 6
-        #     puts "You have successfully filled your team!"
-        # elsif Team.count > 6
-        #     puts "Sorry to say, you can only have 6 pokemon on your team!"
-        # end
    end 
 
    def remove_pokemon(user_input)
      target = Team.all.find{|pokemon| pokemon.name == user_input}
      Team.all.delete(target)
-    binding.pry
    end
 
    def choices
@@ -79,21 +67,34 @@ class CLI
     puts "3. View Pokemon team"
 
     if user_input == "1"
-    #    add_pokemon(user_input)
+        puts "You have choosen add pokemon, please add pokemon to your team"
+       add_pokemon(user_input)
     elsif user_input == "2"
-        # remove_pokemon(user_input)
+        puts "Which POkemon would you like to remove?"
+        puts view_team
+        remove_pokemon(user_input)
     elsif user_input == "3"
-        # view_team
+       puts view_team
     else
         puts "Please pick a valid option"
         choices
+        binding.pry
     end
    end
 
+   def full_team
+    if Team.count == 6
+        puts "You have successfully filled your team!"
+        ending_message 
+    elsif Team.count < 6
+        puts "Sorry to say, you can only have 6 pokemon on your team!"
+      end
+    end
+
     def ending_message 
-    puts "Fantastic! You are now ready to take on the Elite 4 #{user_input}."
-    puts "Please Proceed, the Elite 4 is waiting for you!"
-    puts "Goodluck!"
+        puts "Fantastic! You are now ready to take on the Elite 4 #{user_input}."
+        puts "Please Proceed, the Elite 4 is waiting for you!"
+        puts "Goodluck!"
     end
 
     def design
