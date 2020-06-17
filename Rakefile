@@ -23,3 +23,7 @@ desc "Begin Creating Your Team"
 task :play do 
     sh "ruby bin/run.rb"
 end
+pastel = Pastel.new
+
+puts pastel.red('Unicorns!')
+binding.pry
