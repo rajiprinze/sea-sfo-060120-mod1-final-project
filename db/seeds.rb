@@ -22,3 +22,6 @@ snorlax = Pokemon.create(name: "Snorlax", level: 66, skill: "Body Slam", ability
 garchomp = Pokemon.create(name: "Garchomp", level: 95, skill: "Dragon Tail", ability: "Sand Veil")
 corviknight = Pokemon.create(name: "Corviknight", level: 44, skill: "Waterfall", ability: "Unnerve")
 
+ash = Trainer.create(name: "Ash", age: 15, hometown: "Pallet Town")
+misty = Trainer.create(name: "Misty", age: 16, hometown: "aqua town")
+brock = Trainer.create(name: "Brock", age: 17, hometown: "Rock Town")
