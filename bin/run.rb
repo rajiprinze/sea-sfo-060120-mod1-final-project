@@ -2,7 +2,7 @@ require_relative '../config/environment'
 # require_relative 'seeds.rb'
 system("clear")
 app = CLI.new
-app.poke_box
+app.design
 app.welcome_trainer
 puts "---------------------------------------"
 puts "please press 1, to view your Pokemon database"
@@ -16,10 +16,4 @@ puts "---------------------------------------"
 puts 
 app.choices
 
-# app.view_team
 
-
-
-
-# pokemon = gets.chomp
-# app.add_pokemon(pokemon)
