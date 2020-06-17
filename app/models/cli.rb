@@ -5,10 +5,9 @@ RUBYOPT='-W:no-deprecated'
 #  require_relative 'db/seeds.rb'
 
 class CLI 
-#   move welcome to trainer class??
     def welcome_trainer
         puts "Welcome Trainer! You have finally made it to the Elite 4!"
-        puts "Before you proceed, please anser these questions..."
+        puts "Before you proceed, please answer these questions..."
         puts "What is your Name?"
         trainer_name = gets.chomp
         puts "How old are you?"
@@ -18,11 +17,10 @@ class CLI
         puts "----------------------------------------------------------------"
         puts  "Ahh Yes! #{trainer_name}! We have heard amazing things about you!"
         puts "#{trainer_name}, I am sure you are very much eager to start your first battle."
-        puts "Please head your pokemon storage computer to do so."
-            # binding.pry
-        Trainer.all
+        puts "Please head to your pokemon storage computer to choose your Team."
+        new_trainer = Trainer.create(name: trainer_name, age: trainer_name.to_i, hometown: trainer_hometown)
+        new_trainer
     end
-    # need to get user input for name age and hometown
 
     def pokemon_database 
         inputs = gets.chomp
@@ -41,12 +39,7 @@ class CLI
        end
     end
     def view_team
-        # Team.all
         Team.all.map { |pokeman| pokeman.name}
-        #  Team.all == []
-
-        # binding.pry
-
     end
   
     def user_input
@@ -54,11 +47,14 @@ class CLI
     end
     
     def add_pokemon(user_input)
-        
         new_pokemon = Pokemon.find_by(name: user_input)
         new_pokemon_name = new_pokemon.name
         new_pokemon_id = new_pokemon.id
-        new_team = Team.create( name: new_pokemon_name, id: new_pokemon.id )
+        # binding.pry
+
+        # new_team = Team.new( name: new_pokemon_name, pokemon_id: new_pokemon_id, trainer_id: 4)
+        # binding pry
+        # puts "#{new_pokemon_name} has now been added to your name"
 
         # if Team.count == 6
         #     puts "You have successfully filled your team!"
