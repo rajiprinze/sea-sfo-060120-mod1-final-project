@@ -23,8 +23,6 @@ class CLI
         puts "Oh Dear! Looks like your Team is currently empty!"
         sleep 2
         puts "Please head to your pokemon storage computer fix that :)."
-        sleep 2
-        Trainer.all
     end
 
     def pokemon_database 
@@ -57,7 +55,6 @@ class CLI
         new_pokemon_name = new_pokemon.name
         new_pokemon_id = new_pokemon.id
         new_team = Team.create( name: new_pokemon_name, id: new_pokemon.id )
-        # binding.pry
         puts "#{new_pokemon_name} has now been added to your team"
         full_team
     end 
@@ -93,7 +90,6 @@ class CLI
         puts view_team
        choices
     else
-        # full_team
         ending_message
     end
    end
@@ -102,7 +98,6 @@ class CLI
     if Team.all.count == 6
         puts "You have successfully filled your team!"
         choices
-        # ending_message 
     elsif Team.all.count > 6
         puts "Sorry to say, you can only have 6 pokemon on your team!"
         choices
