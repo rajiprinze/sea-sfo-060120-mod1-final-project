@@ -4,7 +4,6 @@ require 'pry'
 #  require_relative 'db/seeds.rb'
 
 class CLI 
-
     def welcome_trainer
         puts "Welcome Trainer! You have finally made it to the Elite 4!"
         sleep 2
@@ -77,7 +76,7 @@ class CLI
     sleep 2
     puts "3. View Pokemon team"
     sleep 2
-    puts "4. Hit any other button to leave once your Team is full"
+    puts "4. Hit Enter to leave the main menu!"
     sleep 2
     trainer_choice = user_input
     if trainer_choice == "1"
