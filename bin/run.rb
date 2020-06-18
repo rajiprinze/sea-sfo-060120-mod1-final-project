@@ -1,6 +1,7 @@
 require_relative '../config/environment'
 require "pry"
-# require_relative 'seeds.rb'
+
+
 system("clear")
 app = CLI.new
 app.design

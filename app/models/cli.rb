@@ -24,8 +24,6 @@ class CLI
         puts "Oh Dear! Looks like your Team is currently empty!"
         sleep 2
         puts "Please head to your pokemon storage computer fix that :)."
-        sleep 2
-        Trainer.all
     end
 
     def pokemon_database 
@@ -93,7 +91,10 @@ class CLI
         puts view_team
        choices
     else
+<<<<<<< HEAD
 
+=======
+>>>>>>> f980821fa55adf16b6702dffca739a61bd0658d6
         ending_message
     end
    end
