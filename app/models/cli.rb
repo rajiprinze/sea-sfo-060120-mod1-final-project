@@ -15,7 +15,8 @@ class CLI
         puts "Name of your Hometown?"
         trainer_hometown = gets.chomp
         sleep 2
-        puts "----------------------------------------------------------------"
+        
+        puts "---------------------------------------------"
         puts  "Ahh Yes! #{trainer_name}! We have heard amazing things about you!"
         sleep 2
         puts "#{trainer_name}, I am sure you are very much eager to start your first battle."
@@ -90,6 +91,10 @@ class CLI
         puts view_team
        choices
     else
+<<<<<<< HEAD
+
+=======
+>>>>>>> f980821fa55adf16b6702dffca739a61bd0658d6
         ending_message
     end
    end
