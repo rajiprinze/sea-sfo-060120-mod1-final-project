@@ -15,7 +15,8 @@ class CLI
         puts "Name of your Hometown?"
         trainer_hometown = gets.chomp
         sleep 2
-        puts "----------------------------------------------------------------"
+        
+        puts "---------------------------------------------"
         puts  "Ahh Yes! #{trainer_name}! We have heard amazing things about you!"
         sleep 2
         puts "#{trainer_name}, I am sure you are very much eager to start your first battle."
@@ -57,7 +58,6 @@ class CLI
         new_pokemon_name = new_pokemon.name
         new_pokemon_id = new_pokemon.id
         new_team = Team.create( name: new_pokemon_name, id: new_pokemon.id )
-        # binding.pry
         puts "#{new_pokemon_name} has now been added to your team"
         full_team
     end 
@@ -93,7 +93,7 @@ class CLI
         puts view_team
        choices
     else
-        # full_team
+
         ending_message
     end
    end
@@ -102,7 +102,6 @@ class CLI
     if Team.all.count == 6
         puts "You have successfully filled your team!"
         choices
-        # ending_message 
     elsif Team.all.count > 6
         puts "Sorry to say, you can only have 6 pokemon on your team!"
         choices

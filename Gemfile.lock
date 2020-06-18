@@ -18,6 +18,7 @@ GEM
     equatable (0.6.1)
     i18n (1.8.3)
       concurrent-ruby (~> 1.0)
+    kramdown (1.16.2)
     method_source (1.0.0)
     minitest (5.14.1)
     mustermann (1.1.1)
@@ -33,6 +34,7 @@ GEM
     rack-protection (2.0.8.1)
       rack
     require_all (3.0.0)
+    rouge (3.20.0)
     ruby2_keywords (0.0.2)
     sinatra (2.0.8.1)
       mustermann (~> 1.0)
@@ -57,6 +59,13 @@ GEM
     tty-color (0.5.1)
     tty-cursor (0.7.1)
     tty-font (0.5.0)
+    tty-markdown (0.6.0)
+      kramdown (~> 1.16.2)
+      pastel (~> 0.7.2)
+      rouge (~> 3.3)
+      strings (~> 0.1.4)
+      tty-color (~> 0.4)
+      tty-screen (~> 0.6)
     tty-prompt (0.21.0)
       necromancer (~> 0.5.0)
       pastel (~> 0.7.0)
@@ -83,6 +92,7 @@ DEPENDENCIES
   sqlite3
   tty-box
   tty-font
+  tty-markdown
   tty-prompt
 
 BUNDLED WITH
