@@ -19,4 +19,7 @@ task :setup do
     Rake::Task["db:seed"].invoke
 end
 
-
+desc "Start the Journey"
+task :play do 
+    sh "ruby bin/run.rb"
+end
