@@ -42,7 +42,7 @@ The is a 4 step explination of what we want our program to do as we invisioned i
 | skill:string     |             | 
 |ability: string   |             
 
-```
+
 ## C.R.U.D
 1. Create: You must choose (create) your team of 6 pokemon to join.
 2. Read: You must carefully (read) their stats and decide if they are powerful enough to take on the Elite 4
@@ -50,7 +50,7 @@ The is a 4 step explination of what we want our program to do as we invisioned i
 4. Delete: You can also decide to replace pokemon that may not be ideal for our dream team!
 
 The is a 4 step explination of what we want our program to do as we invisioned it. If you are familiar with the game, a Pokemon trainer has the ability to create their team, they are able to see the status of the Pokemon -- name, level, ability, skills etc), the trainer can add and remove pokemon to and from his team to their liking! 
-```
+
 
 ## Running The Test 
 
@@ -76,7 +76,7 @@ What we would love to see is:
   A. this means adding them to the data base 
 3. Recreate catching pokemon 
 
-##Contributors
+## Contributors
 - Keeks5456
 - bbtrombone01
 
