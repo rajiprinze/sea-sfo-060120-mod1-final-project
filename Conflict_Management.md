@@ -47,3 +47,4 @@ Add your communication plan to your Group Agreement. Some things to consider:
 
 
 #### Signed by
+Akiko D. Green

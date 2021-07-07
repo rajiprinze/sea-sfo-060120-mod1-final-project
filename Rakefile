@@ -9,7 +9,7 @@ end
 desc "Starts a console session"
 task :console do 
     ActiveRecord::Base.logger = Logger.new(STDOUT)    
-    binding.pry
+     binding.pry
 end
 
 desc "bundle && migrate && seed"
@@ -19,7 +19,7 @@ task :setup do
     Rake::Task["db:seed"].invoke
 end
 
-desc "Start the sorting"
+desc "Start the Journey"
 task :play do 
     sh "ruby bin/run.rb"
 end
